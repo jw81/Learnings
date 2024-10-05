@@ -1,0 +1,3 @@
+- Run `docker run --mount type=bind,source="$(pwd)"/static-assets,target=/usr/share/nginx/html -p 8080:80 nginx:latest`
+- In a browser, visit `localhost:8080`
+- You can edit the HTML content in `/static-assets/index.html` and see the updates in the browser without having to restart or rebuild the nginx container
