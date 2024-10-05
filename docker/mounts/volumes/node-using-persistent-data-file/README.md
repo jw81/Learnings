@@ -1,0 +1,2 @@
+- Run `docker run --rm --env DATA_PATH=/data/num.txt --mount type=volume,src=incrementor-data,target=/data incrementor`
+- Run repeatedly to see the value is incremented in the persisted `/data/num.txt` file. 
