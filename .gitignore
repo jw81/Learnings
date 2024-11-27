@@ -1,3 +1,4 @@
 
 nginx/.DS_Store
 /nginx/proxy-caching/cache
+/docker/networking/with-compose/mongo-node-example/node_modules
