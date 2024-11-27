@@ -3,6 +3,19 @@
 
 This guide outlines the setup of a Rails API with a single `GET` endpoint for an "animals" resource. The project is fully containerized using Docker and includes an NGINX reverse proxy for caching API responses.
 
+## For quick setup
+
+- run `docker compose up --build`
+- run `docker compose run rails rails db:create db:migrate`
+- run `docker compose run rails rails db:seed`
+- run `curl http://localhost/animals/1`
+  - can change that number at the end of the url from 1-5
+- run `docker compose down -v`
+
+## For manually building it all on your own
+
+If you would like to walk through setting this all up, follow the guide provided below.
+
 ## Project Structure
 
 ```bash
