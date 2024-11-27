@@ -1,5 +1,5 @@
 
-# Rails API with Docker and NGINX
+# Using an NGINX Reverse Proxy for caching API requests.
 
 This guide outlines the setup of a Rails API with a single `GET` endpoint for an "animals" resource. The project is fully containerized using Docker and includes an NGINX reverse proxy for caching API responses.
 
