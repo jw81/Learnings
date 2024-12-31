@@ -2,7 +2,6 @@ import './App.css';
 import { useState } from 'react';
 import TaskForm from './components/TaskForm';
 import TaskList from './components/TaskList';
-import TaskQuantity from './components/TaskQuantity';
 import FilterButton from './components/FilterButton';
 
 function App() {
@@ -41,21 +40,20 @@ function App() {
   return (
     <div className="app">
       <h1>Task Manager</h1>
-      <TaskQuantity tasks={tasks} />
       <TaskForm addTask={addTask} />
       <div className='filter-buttons-container'>
         <FilterButton
-          label="All Tasks"
+          label={`All Tasks (${tasks.length})`}
           isActive={filter === "all"}
           onClick={() => setFilter("all")}
         />
         <FilterButton
-          label="Complete Tasks"
+          label={`Complete Tasks (${tasks.filter((task) => task.completed).length})`}
           isActive={filter === "complete"}
           onClick={() => setFilter("complete")}
         />
         <FilterButton
-          label="Incomplete Tasks"
+          label={`Incomplete Tasks (${tasks.filter((task) => !task.completed).length})`}
           isActive={filter === "incomplete"}
           onClick={() => setFilter("incomplete")}
         />
