@@ -1,11 +1,78 @@
 button {
-  margin: 0 5px;
-  padding: 5px 10px;
-  cursor: pointer;
+  padding: 5px 10px; /* Add padding for consistent size */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Change cursor to pointer */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Smooth effects */
 }
 
 button.active {
   background-color: #ff7700;
-  color: white;
-  border: none;
+  transform: translateY(1px); /* Slight press effect */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Softer shadow when pressed */
+}
+
+button:hover {
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow on hover */
+}
+
+.delete-button {
+  background-color: #e74c3c; /* Red background */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  padding: 5px 10px; /* Adjust padding */
+  cursor: pointer; /* Add pointer cursor */
+}
+
+.delete-button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+ul {
+  list-style: none; /* Remove default bullet points */
+  margin: 5px auto; /* Center the list with some vertical margin */
+  padding: 20px; /* Add padding inside the card */
+  max-width: 600px; /* Set a max width for the card */
+  background-color: #ffffff; /* White background for the card */
+  border-radius: 8px; /* Add rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+li {
+  display: flex; /* Enable flexbox */
+  align-items: center; /* Vertically align items */
+  justify-content: space-between; /* Push buttons to the right */
+  padding: 10px; /* Add spacing */
+  border-bottom: 1px solid #ddd; /* Optional: Divider between items */
+}
+
+li span {
+  flex-grow: 1; /* Allow span to take up all available space */
+  text-align: left; /* Ensure the text is left-aligned */
+}
+
+li button {
+  flex-shrink: 0; /* Prevent buttons from shrinking */
+  padding: 5px 10px; /* Style the buttons */
+}
+
+ul:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow on hover */
+  transition: box-shadow 0.3s ease; /* Smooth transition for the shadow */
+}
+
+li span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+li:last-child {
+  border-bottom: none; /* Remove divider for the last item */
+}
+
+.filter-buttons-container {
+  display: flex; /* Enable flexbox */
+  gap: 5px; /* Add horizontal spacing between buttons */
 }

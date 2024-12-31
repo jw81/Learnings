@@ -42,7 +42,8 @@ function App() {
     <div className="app">
       <h1>Task Manager</h1>
       <TaskQuantity tasks={tasks} />
-      <div>
+      <TaskForm addTask={addTask} />
+      <div className='filter-buttons-container'>
         <FilterButton
           label="All Tasks"
           isActive={filter === "all"}
@@ -59,7 +60,6 @@ function App() {
           onClick={() => setFilter("incomplete")}
         />
       </div>
-      <TaskForm addTask={addTask} />
       <TaskList
         tasks={filteredTasks}
         toggleTaskCompletion={toggleTaskCompletion}
