@@ -1,8 +1,8 @@
 button {
   padding: 5px 10px; /* Add padding for consistent size */
-  border: none; /* Remove default border */
-  cursor: pointer; /* Change cursor to pointer */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Smooth effects */
 }
 
@@ -18,11 +18,11 @@ button:hover {
 }
 
 .delete-button {
-  background-color: #e74c3c; /* Red background */
-  color: white; /* White text */
-  border: none; /* Remove border */
-  padding: 5px 10px; /* Adjust padding */
-  cursor: pointer; /* Add pointer cursor */
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
 .delete-button:hover {
@@ -32,29 +32,29 @@ button:hover {
 ul {
   list-style: none; /* Remove default bullet points */
   margin: 5px auto; /* Center the list with some vertical margin */
-  padding: 20px; /* Add padding inside the card */
-  max-width: 600px; /* Set a max width for the card */
-  background-color: #ffffff; /* White background for the card */
-  border-radius: 8px; /* Add rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  padding: 20px;
+  max-width: 600px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 li {
-  display: flex; /* Enable flexbox */
-  align-items: center; /* Vertically align items */
+  display: flex;
+  align-items: center;
   justify-content: space-between; /* Push buttons to the right */
-  padding: 10px; /* Add spacing */
-  border-bottom: 1px solid #ddd; /* Optional: Divider between items */
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
 li span {
   flex-grow: 1; /* Allow span to take up all available space */
-  text-align: left; /* Ensure the text is left-aligned */
+  text-align: left;
 }
 
 li button {
   flex-shrink: 0; /* Prevent buttons from shrinking */
-  padding: 5px 10px; /* Style the buttons */
+  padding: 5px 10px;
 }
 
 ul:hover {
@@ -73,6 +73,6 @@ li:last-child {
 }
 
 .filter-buttons-container {
-  display: flex; /* Enable flexbox */
+  display: flex;
   gap: 5px; /* Add horizontal spacing between buttons */
 }
