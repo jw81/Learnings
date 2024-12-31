@@ -24,12 +24,20 @@ function App() {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
+  const getCompleteTasks = () => {
+    return tasks.filter((task) => task.completed);
+  }
+
+  const getIncompleteTasks = () => {
+    return tasks.filter((task) => !task.completed);
+  }
+
   const getFilteredTasks = () => {
     switch (filter) {
       case "incomplete":
-        return tasks.filter((task) => !task.completed);
+        return getIncompleteTasks();
       case "complete":
-        return tasks.filter((task) => task.completed);
+        return getCompleteTasks();
       default:
         return tasks;
     }
@@ -48,12 +56,12 @@ function App() {
           onClick={() => setFilter("all")}
         />
         <FilterButton
-          label={`Complete Tasks (${tasks.filter((task) => task.completed).length})`}
+          label={`Complete Tasks (${getCompleteTasks().length})`}
           isActive={filter === "complete"}
           onClick={() => setFilter("complete")}
         />
         <FilterButton
-          label={`Incomplete Tasks (${tasks.filter((task) => !task.completed).length})`}
+          label={`Incomplete Tasks (${getIncompleteTasks().length})`}
           isActive={filter === "incomplete"}
           onClick={() => setFilter("incomplete")}
         />
