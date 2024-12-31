@@ -17,7 +17,7 @@ function TaskItem({ task, toggleTaskCompletion, deleteTask }) {
 }
 
 TaskItem.propTypes = {
-  task: PropTypes.string.isRequired,
+  task: PropTypes.object.isRequired,
   toggleTaskCompletion: PropTypes.func.isRequired,
   deleteTask: PropTypes.func.isRequired
 }
