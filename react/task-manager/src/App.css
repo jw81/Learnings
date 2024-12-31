@@ -1,0 +1,78 @@
+button {
+  padding: 5px 10px; /* Add padding for consistent size */
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Smooth effects */
+}
+
+button.active {
+  background-color: #ff7700;
+  transform: translateY(1px); /* Slight press effect */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Softer shadow when pressed */
+}
+
+button:hover {
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow on hover */
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+ul {
+  list-style: none; /* Remove default bullet points */
+  margin: 5px auto; /* Center the list with some vertical margin */
+  padding: 20px;
+  max-width: 600px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Push buttons to the right */
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+li span {
+  flex-grow: 1; /* Allow span to take up all available space */
+  text-align: left;
+}
+
+li button {
+  flex-shrink: 0; /* Prevent buttons from shrinking */
+  padding: 5px 10px;
+}
+
+ul:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow on hover */
+  transition: box-shadow 0.3s ease; /* Smooth transition for the shadow */
+}
+
+li span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+li:last-child {
+  border-bottom: none; /* Remove divider for the last item */
+}
+
+.filter-buttons-container {
+  display: flex;
+  gap: 5px; /* Add horizontal spacing between buttons */
+}
